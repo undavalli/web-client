@@ -1,0 +1,12 @@
+[
+{"envCode" : "DEV",
+ "services": 
+	[{"serviceCode": "ABC","serviceURL": "http://test/url"}, 
+	 {"serviceCode": "XYZ","serviceURL": "http://test/url"}]
+},
+{"envCode" : "QA",
+ "services": 
+	[{"serviceCode": "QA-ABC","serviceURL": "http://test/url"}, 
+	 {"serviceCode": "QA-XYZ","serviceURL": "http://test/url"}]
+}
+]
