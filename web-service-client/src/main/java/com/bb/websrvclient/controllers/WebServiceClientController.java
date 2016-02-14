@@ -33,8 +33,17 @@ import com.google.gson.reflect.TypeToken;
 @Controller
 public class WebServiceClientController {
 	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ModelAndView welcome() {
+		return prepareIndexPage();
+	}
+	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public ModelAndView indexBuild(Model model) {
+		return prepareIndexPage();
+	}
+	
+	private ModelAndView prepareIndexPage(){
 		//
 		WebServiceReq reqObj = new WebServiceReq();
 		Map<String, String> envsMap = new LinkedHashMap<String, String>();

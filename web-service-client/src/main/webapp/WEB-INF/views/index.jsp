@@ -84,6 +84,8 @@
 		if(enviromentId!=null && enviromentId!=""){
 			document.forms[0].action = 'loadSrvs';
 			document.forms[0].submit();
+		}else{
+			document.getElementById("serviceId").options.length=0;
 		}
 	}
 	function handleSubmit(){
