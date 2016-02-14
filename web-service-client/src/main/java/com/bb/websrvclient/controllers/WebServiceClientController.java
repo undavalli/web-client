@@ -1,6 +1,8 @@
 package com.bb.websrvclient.controllers;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -154,9 +156,16 @@ public class WebServiceClientController {
 	}
 	
 	private List<EnvironmentFormBean> loadEnvList(){
+		BufferedReader br=null;
+		File file = null;
 		try{
-			ClassPathResource jsonFile = new ClassPathResource("env_details.json");
-			BufferedReader br = new BufferedReader(new InputStreamReader(jsonFile.getInputStream(), "UTF-8"));
+			file = new File("env_details.json");
+			if(file.exists()){
+				br = new BufferedReader(new FileReader(file));
+			}else{
+				ClassPathResource jsonFile = new ClassPathResource("env_details.json");
+				br = new BufferedReader(new InputStreamReader(jsonFile.getInputStream(), "UTF-8"));
+			}
 			Gson gson = new GsonBuilder().create();
 			Type listType = new TypeToken<List<EnvironmentFormBean>>() {}.getType();
 			List<EnvironmentFormBean> obj = gson.fromJson(br, listType);
@@ -166,6 +175,5 @@ public class WebServiceClientController {
 			e.printStackTrace();
 			return Collections.emptyList();
 		}
-		
 	}
 }
