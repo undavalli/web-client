@@ -1,12 +1,68 @@
-[
-{"envCode" : "DEV",
- "services": 
-	[{"serviceCode": "ABC","serviceURL": "http://test/url"}, 
-	 {"serviceCode": "XYZ","serviceURL": "http://test/url"}]
-},
-{"envCode" : "QA",
- "services": 
-	[{"serviceCode": "QA-ABC","serviceURL": "http://test/url"}, 
-	 {"serviceCode": "QA-XYZ","serviceURL": "http://test/url"}]
-}
+[  
+   {  
+      "envCode":"DEV",
+      "services":[  
+         {  
+            "serviceCode":"ABC",
+            "serviceURL":"http://test/url",
+            "headers":[  
+               {  
+                  "headerCode":"A",
+                  "headerValue":"1"
+               },
+               {  
+                  "headerCode":"B",
+                  "headerValue":"2"
+               }
+            ]
+         },
+         {  
+            "serviceCode":"XYZ",
+            "serviceURL":"http://test/url",
+            "headers":[  
+               {  
+                  "headerCode":"A",
+                  "headerValue":"1"
+               },
+               {  
+                  "headerCode":"B",
+                  "headerValue":"2"
+               }
+            ]
+         }
+      ]
+   },
+   {  
+      "envCode":"QA",
+      "services":[  
+         {  
+            "serviceCode":"QA-ABC",
+            "serviceURL":"http://test/url",
+            "headers":[  
+               {  
+                  "headerCode":"A",
+                  "headerValue":"1"
+               },
+               {  
+                  "headerCode":"B",
+                  "headerValue":"2"
+               }
+            ]
+         },
+         {  
+            "serviceCode":"QA-XYZ",
+            "serviceURL":"http://test/url",
+            "headers":[  
+               {  
+                  "headerCode":"A",
+                  "headerValue":"1"
+               },
+               {  
+                  "headerCode":"B",
+                  "headerValue":"2"
+               }
+            ]
+         }
+      ]
+   }
 ]

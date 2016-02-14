@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.bb.websrvclient.domains.EnvServiceReqHeaderFormBean;
 import com.bb.websrvclient.domains.EnvironmentFormBean;
 import com.bb.websrvclient.domains.EnvironmentServicesFormBean;
 import com.bb.websrvclient.domains.WebServiceReq;
@@ -95,6 +96,7 @@ public class WebServiceClientController {
 		HttpPost httpPost;
 		StringEntity stringEntity;
 		CloseableHttpResponse httpResponse;
+		List<EnvServiceReqHeaderFormBean> headersList;
 		try {
 			String envId = reqObj.getEnviromentId();
 			List<EnvironmentFormBean> envList = loadEnvList();
@@ -109,6 +111,13 @@ public class WebServiceClientController {
 						}
 						httpClient = HttpClients.createDefault();
 						httpPost = new HttpPost(selectSrv.getServiceURL());
+						
+						headersList = selectSrv.getHeaders();
+						if(headersList!=null && headersList.size()>0){
+							for(EnvServiceReqHeaderFormBean header:headersList){
+								httpPost.addHeader(header.getHeaderCode(), header.getHeaderValue());
+							}
+						}
 						stringEntity = new StringEntity(reqObj.getReqContent());
 						httpPost.setEntity(stringEntity);
 						httpResponse = httpClient.execute(httpPost);

@@ -7,8 +7,8 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<project.source.version>1.8</project.source.version>
-		<project.target.version>1.8</project.target.version>
+		<project.source.version>1.7</project.source.version>
+		<project.target.version>1.7</project.target.version>
 		<project.encoding>UTF-8</project.encoding>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
 		<hibernate.version>4.2.0.SP1</hibernate.version>
