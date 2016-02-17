@@ -1,0 +1,16 @@
+[
+	{
+		"envCode":"DEV",
+		"serviceCode":"ABC",
+		"reqContFileName":"/web-client/schdata/sample.xml",
+		"cronExp":"0 0/1 * 1/1 * ? *",
+		"notificationEmail":"mywebclient1@gmail.com"
+	},
+	{
+		"envCode":"DEV",
+		"serviceCode":"XYZ",
+		"reqContFileName":"/web-client/schdata/sample.xml",
+		"cronExp":"0 0/1 * 1/1 * ? *",
+		"notificationEmail":"mywebclient1@gmail.com"
+	}
+]

@@ -1,0 +1,6 @@
+<WebServiceReq>
+	<enviromentId>test</enviromentId>
+	<serviceId>testsrv</serviceId>
+	<reqContent>xyz</reqContent>
+	<respContent></respContent>
+</WebServiceReq>

@@ -4,7 +4,7 @@
       "services":[  
          {  
             "serviceCode":"ABC",
-            "serviceURL":"http://test/url",
+            "serviceURL":"http://localhost:8080/web-service-client/rest/testsrvs",
             "headers":[  
                {  
                   "headerCode":"A",
@@ -18,7 +18,7 @@
          },
          {  
             "serviceCode":"XYZ",
-            "serviceURL":"http://test/url",
+            "serviceURL":"http://localhost:8080/web-service-client/rest/testsrvs",
             "headers":[  
                {  
                   "headerCode":"A",
@@ -37,7 +37,7 @@
       "services":[  
          {  
             "serviceCode":"QA-ABC",
-            "serviceURL":"http://test/url",
+            "serviceURL":"http://localhost:8080/web-service-client/rest/testsrvs",
             "headers":[  
                {  
                   "headerCode":"A",
@@ -51,7 +51,7 @@
          },
          {  
             "serviceCode":"QA-XYZ",
-            "serviceURL":"http://test/url",
+            "serviceURL":"http://localhost:8080/web-service-client/rest/testsrvs",
             "headers":[  
                {  
                   "headerCode":"A",
